@@ -1,16 +1,37 @@
 "use client";
-import { Roboto } from "next/font/google";
+
 import { createTheme } from "@mui/material/styles";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#928C88",
+    },
+    secondary: {
+      main: "#B19484",
+    },
+    background: {
+      default: "#FFF9F4",
+      paper: "#ECDCD1",
+    },
+    text: {
+      primary: "#765D4F",
+    },
+  },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    h1: {
+      fontSize: "2.5rem",
+      fontWeight: 500,
+    },
+    h2: {
+      fontSize: "2rem",
+      fontWeight: 400,
+    },
+    body1: {
+      fontSize: "1rem",
+      fontWeight: 300,
+    },
   },
 });
 
