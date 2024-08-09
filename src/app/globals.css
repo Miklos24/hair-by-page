@@ -1,1 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p > a {
+  text-decoration: underline;
+}
+
+.instagram-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -5px; /* Adjust for spacing around items */
+}
+
+.instagram-item {
+  flex: 0 0 calc(33.333% - 10px); /* 3 items per row, with space between */
+  margin: 5px; /* Adjust for spacing around items */
+  position: relative;
+  display: block;
+}
+
+.instagram-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square aspect ratio */
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  border-radius: 10px;
+}
+
+.pagination {
+  display: block;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.pagination-btn {
+  background-color: #928c88;
+  color: #fff9f4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: #ecdcd1;
+  color: #765d4f;
+}

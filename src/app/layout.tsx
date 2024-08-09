@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { ThemeProvider } from '@mui/material/styles'
-import theme from '../theme';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../theme";
 
-import Navbar from '../components/Navbar';
+import Navbar from "@/components/Navbar";
 import { Box } from "@mui/material";
+import Footer from "@/components/Footer";
+import metadataContent from "@/../public/content/metadata.json";
 
 export const metadata: Metadata = {
-  title: "Hair By Page",
-  description: "A website for hair and other stuff",
+  title: metadataContent.title,
+  description: metadataContent.description,
 };
 
 export default function RootLayout({
@@ -24,7 +26,10 @@ export default function RootLayout({
         <ThemeProvider theme={theme}>
           <body>
             <Navbar />
-            {children}
+            <Box component="main" sx={{ minHeight: "80vh" }}>
+              {children}
+            </Box>
+            <Footer />
           </body>
         </ThemeProvider>
       </AppRouterCacheProvider>

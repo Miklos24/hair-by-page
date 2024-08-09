@@ -15,12 +15,19 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
+import navContent from "@/../public/content/nav.json";
 
-const pages = ["Home", "Services", "Gallery", "About", "Contact"];
+const pages: string[] = ["Home", "Services", "Policies", "Gallery", "Bookings"];
 
-const Navbar = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+const pageToPath = (page: string) => {
+  if (page === "Home") return "/";
+  return `/${page.toLowerCase()}`;
+};
+
+const Navbar: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -38,23 +45,37 @@ const Navbar = () => {
     <AppBar
       position="fixed"
       elevation={0}
-      sx={{ top: 0, backgroundColor: "background.paper" }}
+      sx={{
+        top: 0,
+        backgroundColor: "transparent",
+        "&:after": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: (theme) =>
+            `linear-gradient(to bottom, ${theme.palette.background.paper} 0%, ${theme.palette.background.paper} 20%, transparent 100%)`,
+          zIndex: -1,
+        },
+      }}
     >
-      <Toolbar>
+      <Toolbar sx={{ minHeight: "64px" }}>
         <Typography
           color="text.primary"
           variant="h6"
           noWrap
           component="div"
-          sx={{ flexGrow: 1 }}
+          sx={{ flexGrow: 1, fontFamily: '"Libra Baskerville", serif' }}
         >
-          Hair By Page
+          {navContent.title.toLowerCase()}
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
           {pages.map((page) => (
-            <Button key={page} sx={{ color: "text.primary" }}>
-              {page}
-            </Button>
+            <Link key={page} href={pageToPath(page)} passHref>
+              <Button sx={{ color: "text.primary" }}>{page}</Button>
+            </Link>
           ))}
         </Box>
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -88,14 +109,16 @@ const Navbar = () => {
             </IconButton>
             <List>
               {pages.map((page) => (
-                <ListItem key={page} onClick={toggleDrawer(false)}>
-                  <ListItemButton>
-                    <ListItemText
-                      primary={page}
-                      primaryTypographyProps={{ variant: "h6" }}
-                    />
-                  </ListItemButton>
-                </ListItem>
+                <Link key={page} href={pageToPath(page)} passHref>
+                  <ListItem component="a" onClick={toggleDrawer(false)}>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={page}
+                        primaryTypographyProps={{ variant: "h6" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
               ))}
             </List>
           </Drawer>

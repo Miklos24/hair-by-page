@@ -1,0 +1,51 @@
+{
+  "title": "Bookings",
+  "contentToggleLabels": {
+    "heading": "Are you a new client or a returning client?",
+    "options": ["New Client", "Returning Client"]
+  },
+  "newClientForm": {
+    "heading": "Consultation Form",
+    "contactInfo": {
+      "heading": "Contact Information",
+      "name": {
+        "label": "Name",
+        "requiredText": "Name is required"
+      },
+      "pronouns": {
+        "label": "Preferred Pronouns",
+        "requiredText": "Pronouns are required"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "requiredText": "Phone number is required",
+        "invalidText": "Enter a valid phone number"
+      }
+    },
+    "appointmentInfo": {
+      "heading": "Appointment Details",
+      "services": {
+        "label": "What service(s) are you looking to book in for?",
+        "requiredText": "Please specify the service(s) you are looking to book",
+        "placeholder": "Please list the service(s) you are looking to book"
+      },
+      "chemicalHistory": {
+        "label": "Have you had any chemical services (salon colour, box dye, henna, permanent straightening, keratin etc.) in the past 3-4 years? If so, please specify.",
+        "placeholder": "Please list prior chemical services"
+      },
+      "schedulingPreference": {
+        "label": "What are your scheduling preferences?",
+        "requiredText": "Scheduling preferences are required"
+      }
+    },
+    "disclaimer": {
+      "body": "Please note that I require a deposit for first-time colour clients. This deposit ensures that your requested time and date are reserved exclusively for you. Appointments are not confirmed until the deposit is received. Appointment requests will be held for 24 hours while waiting for the deposit before being released for other clients. For more information about my policies, please check ",
+      "link": "my policies page."
+    },
+    "submitButton": "Submit",
+    "submitted": {
+      "heading": "Thank you for submitting your consultation form, {{name}}!",
+      "body": "I will be in touch with you shortly to confirm your appointment."
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "services": {
+    "Blonding": {
+      "description": "All services include a wash, blow dry & style. Prices are subject to change based on amount of product needed.",
+      "options": [
+        { "name": "Partial Foil (10-15 foils)", "price": "$160+" },
+        { "name": "Half Head Root Foils (1”-2” roots)", "price": "$180+" },
+        { "name": "Half Head Full Length Foils (3”+ roots)", "price": "$215+" },
+        { "name": "Full Head Root Foils (1”-2” roots)", "price": "$215+" },
+        { "name": "Full Head Full Length Foils (3”+ roots)", "price": "$255+" },
+        { "name": "Bleach Roots (1” roots)", "price": "$190+" },
+        { "name": "Balayage", "price": "$270+" },
+        { "name": "Platinum Card", "price": "$350+" },
+        { "name": "Tip Out", "price": "$75+" },
+        { "name": "Colour Correction", "price": "$110 per hour" }
+      ]
+    },
+    "Colour": {
+      "description": "All services include a wash, blow dry & style. Prices are subject to change based on amount of product needed.",
+      "options": [
+        { "name": "Grey Coverage (1”-2” roots)", "price": "$95+" },
+        { "name": "Full Colour", "price": "$160+" },
+        { "name": "Toner", "price": "$80+" },
+        { "name": "Reverse Balayage", "price": "$200+" }
+      ]
+    },
+    "Extensions": {
+      "description": "New clients are required to book a 30-40 minute consultation to determine the best extension method, colour match the hair and order the extensions before booking an appointment.",
+      "options": [
+        { "name": "Consultation", "price": "$35" },
+        { "name": "Custom Colouring Extensions", "price": "$70" },
+        { "name": "Sew-in Wefts (2 tracks)", "price": "$275" },
+        { "name": "Sew-in Wefts (1 track)", "price": "$190" },
+        { "name": "Additional Tracks", "price": "$100" },
+        { "name": "Nano-link Extensions", "price": "$400" },
+        { "name": "Extension Removal", "price": "$60" }
+      ]
+    },
+    "Treatments": {
+      "description": "All services include a wash, blow dry & style. Prices are subject to change based on amount of product needed.",
+      "options": [
+        { "name": "Hair Botox (per 3oz)", "price": "$350" },
+        { "name": "Biotin Therapy (per 3oz)", "price": "$350" },
+        { "name": "Extra Product (per extra oz)", "price": "$20" }
+      ]
+    },
+    "Cuts": {
+      "description": "All services include a wash, blow dry & style.",
+      "options": [
+        { "name": "Scissor Cut", "price": "$75" },
+        { "name": "Clipper Cut", "price": "$40" },
+        { "name": "Cut with Colour", "price": "$65" }
+      ]
+    },
+    "Styling": {
+      "options": [
+        { "name": "Blow Out", "price": "$60" },
+        { "name": "Curls/Flat Ironing", "price": "$25" }
+      ]
+    },
+    "Add Ons": {
+      "options": [
+        { "name": "Add On Roots", "price": "$70" },
+        { "name": "Add On Toner", "price": "$60" },
+        { "name": "Fashion Colour", "price": "$45" },
+        { "name": "In-sink Treatment", "price": "$28" }
+      ]
+    }
+  }
+}

@@ -15,11 +15,14 @@ const theme = createTheme({
       paper: "#ECDCD1",
     },
     text: {
-      primary: "#765D4F",
+      primary: "#5c473b",
     },
   },
   typography: {
     fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    allVariants: {
+      color: "#5c473b",
+    },
     h1: {
       fontSize: "2.5rem",
       fontWeight: 500,
