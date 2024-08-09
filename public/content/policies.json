@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "deposit": {
+      "title": "Deposit",
+      "description": "This is a policy for first-time color clients. A non-refundable deposit of $100 is required upon booking to secure your appointment. This deposit ensures that your requested time and date are reserved exclusively for you. Please note that appointments are confirmed once the deposit is received. Appointment requests will be held for 24 hours while waiting for the deposit before being released for other clients. You will receive the deposit information upon requesting an appointment."
+    },
+    "late_cancellations": {
+      "title": "Late Cancellations",
+      "description": "Cancellations require a minimum of 48 hours notice. Clients who are 15 minutes late to their appointment or cancel within 48 hours of their appointment will be considered a late cancellation. All clients with late cancellations will be expected to pay a one-time fee in order to re-book a new appointment. This fee is non-refundable and does not go towards a new appointment; it is to cover the time set aside for the missed appointment.\n\nIf a deposit is on your file and you cancel within 48 hours, it will be withdrawn to pay for the missed appointment. A new deposit will need to be paid to book a new appointment.\n\nClients who are consistently late or cancel within 48 hours of their scheduled appointment will be asked to pay a deposit for all future appointments."
+    }
+  }
+}

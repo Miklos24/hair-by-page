@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HairByPage
 
-## Getting Started
+**HairByPage.com** is a website designed for the Hair By Page hairdressing business, showcasing services, allowing clients to contact, and featuring social media integration. The site is built with modern web development technologies and focuses on delivering a seamless user experience.
 
-First, run the development server:
+## Technology Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework:** [Next.js](https://nextjs.org/) - A React framework that enables server-side rendering and static site generation.
+- **Frontend:** [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/) - For building a type-safe and scalable user interface.
+- **API Integration:**
+  - **Instagram API:** Fetches the latest content from the hairdresser's Instagram account to display on the site.
+  - **Twilio API:** Handles form submissions, enabling clients to send inquiries directly through the website.
+- **Deployment:** The site is deployed on [Vercel](https://vercel.com/), providing automatic deployments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Responsive Design:** The site is fully responsive, ensuring a consistent experience across devices.
+- **Dynamic Content:** The gallery automatically updates with the latest Instagram posts.
+- **Client Contact Form:** A secure contact form integrated with Twilio for real-time notifications.
