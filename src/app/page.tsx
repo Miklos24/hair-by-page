@@ -27,12 +27,13 @@ const HomePage: NextPage = () => {
       >
         <Box
           sx={{
-            height: isMobile ? "30vh" : "30vh",
+            height: isMobile ? "40vh" : "30vh",
             marginTop: isMobile ? "15vh" : "30vh",
             paddingX: isMobile ? 10 : 0,
           }}
         >
           <Typography
+            align={isMobile ? "left" : "center"}
             variant="h3"
             color="background.default"
             sx={{ marginTop: 4 }}
@@ -40,9 +41,14 @@ const HomePage: NextPage = () => {
             {homepageContent.title}
           </Typography>
           <Typography
+            align={isMobile ? "left" : "center"}
             variant="subtitle1"
             color="background.default"
-            sx={{ marginTop: 2 }}
+            sx={{
+              marginTop: 2,
+              fontSize: isMobile ? "1.2rem" : "1.5rem",
+              textShadow: isMobile ? "2px 2px 4px rgba(0, 0, 0, 0.7)" : "none",
+            }}
           >
             {homepageContent.subtitle}
           </Typography>

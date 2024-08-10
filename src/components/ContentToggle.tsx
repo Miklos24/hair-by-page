@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface ContentToggleProps {
@@ -12,6 +20,9 @@ interface ContentToggleProps {
 }
 
 const ContentToggle: React.FC<ContentToggleProps> = ({ labels, children }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   if (children.length !== labels.options.length) {
     throw new Error(
       "The number of children must match the number of options in the labels."
@@ -26,7 +37,7 @@ const ContentToggle: React.FC<ContentToggleProps> = ({ labels, children }) => {
 
   return (
     <>
-      <Typography variant="h2" gutterBottom align="center">
+      <Typography variant="h2" align="center" gutterBottom>
         {labels.heading}
       </Typography>
       <Grid container justifyContent="center">
@@ -37,7 +48,7 @@ const ContentToggle: React.FC<ContentToggleProps> = ({ labels, children }) => {
                 variant={index === selected ? "contained" : "outlined"}
                 size="large"
                 onClick={handleSelect(index)}
-                sx={{ width: "190px" }}
+                sx={{ width: isMobile ? "130px" : "190px" }}
               >
                 {option}
               </Button>
@@ -47,7 +58,7 @@ const ContentToggle: React.FC<ContentToggleProps> = ({ labels, children }) => {
                 <Box
                   sx={{
                     width: "2px",
-                    height: "60px",
+                    height: isMobile ? "100px" : "60px",
                     backgroundColor: "rgba(0, 0, 0, 0.54)",
                     mx: "5vw",
                   }}
