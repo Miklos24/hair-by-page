@@ -27,7 +27,7 @@ const HomePage: NextPage = () => {
       >
         <Box
           sx={{
-            height: isMobile ? "40vh" : "30vh",
+            height: isMobile ? "50vh" : "30vh",
             marginTop: isMobile ? "15vh" : "30vh",
             paddingX: isMobile ? 10 : 0,
           }}
