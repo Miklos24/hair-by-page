@@ -4,6 +4,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../theme";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "@/components/Navbar";
 import { Box } from "@mui/material";
@@ -30,6 +31,7 @@ export default function RootLayout({
               {children}
             </Box>
             <Footer />
+            <Analytics />
           </body>
         </ThemeProvider>
       </AppRouterCacheProvider>
