@@ -218,6 +218,11 @@ const NewClientForm: React.FC = () => {
       <Controller
         name="chemicalHistory"
         control={control}
+        rules={{
+          required:
+            bookingsContent.newClientForm.appointmentInfo.chemicalHistory
+              .requiredText,
+        }}
         render={({ field }) => (
           <TextField
             {...field}
