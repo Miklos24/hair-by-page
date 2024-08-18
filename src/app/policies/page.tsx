@@ -1,6 +1,5 @@
 "use client";
-import { Box, Grid, Typography } from "@mui/material";
-import { Parallax } from "react-parallax";
+import { Box, Typography } from "@mui/material";
 import policiesContent from "@/../public/content/policies.json";
 import type { NextPage } from "next";
 

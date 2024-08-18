@@ -31,6 +31,7 @@
       },
       "chemicalHistory": {
         "label": "Have you had any chemical services (salon colour, box dye, henna, permanent straightening, keratin etc.) in the past 3-4 years? If so, please specify.",
+        "requiredText": "Must include prior chemical services",
         "placeholder": "Please list prior chemical services"
       },
       "schedulingPreference": {
