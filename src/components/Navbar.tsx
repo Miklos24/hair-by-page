@@ -19,7 +19,7 @@ import React from "react";
 import Link from "next/link";
 import navContent from "@/../public/content/nav.json";
 
-const pages: string[] = ["Home", "Services", "Policies", "Gallery", "Bookings"];
+const pages: string[] = ["Home", "Services", "Policies", "Bookings"];
 
 const pageToPath = (page: string) => {
   if (page === "Home") return "/";
