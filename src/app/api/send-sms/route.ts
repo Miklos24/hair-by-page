@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     const response = await client.messages.create({
       body: `New consultation form submission from hairbypage.com:\n\n${message}`,
       from: "+15482909261",
-      to: "+17789512868",
+      to: "12066505378",
     });
     return NextResponse.json(response, { status: 200 });
   } catch (error: any) {
