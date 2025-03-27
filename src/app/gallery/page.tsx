@@ -1,6 +1,5 @@
 "use client";
 import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { InstagramGallery } from "instagram-gallery";
 import type { NextPage } from "next";
 import galleryContent from "@/../public/content/gallery.json";
 
@@ -15,11 +14,6 @@ const GalleryPage: NextPage = () => {
       <Typography variant="h1" gutterBottom align="center">
         {galleryContent.title}
       </Typography>
-      <InstagramGallery
-        accessToken={accessToken}
-        count={isMobile ? 15 : 9}
-        pagination={true}
-      />
     </Container>
   );
 };

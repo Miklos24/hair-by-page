@@ -80,7 +80,7 @@ const NewClientForm: React.FC = () => {
       .trim()
       .replace(/^\s+/gm, "");
 
-    await fetch("/api/send-sms", {
+    await fetch("/api/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -166,18 +166,16 @@ const NewClientForm: React.FC = () => {
             disabled={false}
             maskChar="_"
           >
-            {
-              (() => (
-                <TextField
-                  {...field}
-                  label={bookingsContent.newClientForm.contactInfo.phone.label}
-                  variant="outlined"
-                  fullWidth
-                  error={!!errors.phoneNumber}
-                  helperText={errors.phoneNumber?.message}
-                />
-              )) as unknown as React.ReactNode
-            }
+            {(inputProps: any) => (
+              <TextField
+                {...field}
+                label={bookingsContent.newClientForm.contactInfo.phone.label}
+                variant="outlined"
+                fullWidth
+                error={!!errors.phoneNumber}
+                helperText={errors.phoneNumber?.message}
+              />
+            )}
           </InputMask>
         )}
       />
